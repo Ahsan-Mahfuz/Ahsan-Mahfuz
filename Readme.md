@@ -156,32 +156,33 @@ I'm a passionate Full Stack Developer with expertise in JavaScript and its ecosy
   <table>
     <tr>
       <td><strong>Monday</strong></td>
-      <td><img src="https://progress-bar.dev/85/?width=120&color=0D76A8" alt="Monday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜ | 80% |</td>
       <td><strong>Friday</strong></td>
-      <td><img src="https://progress-bar.dev/75/?width=120&color=0D76A8" alt="Friday Activity" /></td>
+            <td>🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜ | 80% |</td>
     </tr>
     <tr>
       <td><strong>Tuesday</strong></td>
-      <td><img src="https://progress-bar.dev/90/?width=120&color=0D76A8" alt="Tuesday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜ | 85% |</td>
       <td><strong>Saturday</strong></td>
-      <td><img src="https://progress-bar.dev/40/?width=120&color=0D76A8" alt="Saturday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦🟦🟦🟦🟦⬜ | 90% |</td>
     </tr>
     <tr>
       <td><strong>Wednesday</strong></td>
-      <td><img src="https://progress-bar.dev/80/?width=120&color=0D76A8" alt="Wednesday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦🟦🟦🟦🟦⬜ | 90% |</td>
       <td><strong>Sunday</strong></td>
-      <td><img src="https://progress-bar.dev/30/?width=120&color=0D76A8" alt="Sunday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜ | 50% |</td>
     </tr>
     <tr>
       <td><strong>Thursday</strong></td>
-      <td><img src="https://progress-bar.dev/70/?width=120&color=0D76A8" alt="Thursday Activity" /></td>
+      <td>🟦🟦🟦🟦🟦⬜⬜⬜⬜⬜ | 50% |</td>
       <td><strong>Average</strong></td>
-      <td><img src="https://progress-bar.dev/67/?width=120&color=0D76A8" alt="Average Activity" /></td>
+            <td>🟦🟦🟦🟦🟦🟦🟦🟦⬜⬜ | 80% |</td>
     </tr>
   </table>
 </div>
 
 <!-- Expertise Gauge -->
+
 <div align="center">
   <h2>🔍 Expertise Level</h2>
   
@@ -191,28 +192,22 @@ I'm a passionate Full Stack Developer with expertise in JavaScript and its ecosy
         <div align="center">
           <img src="https://img.shields.io/badge/Frontend-Expert-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="Frontend" />
           <br>
-          <img src="https://progress-bar.dev/95/?width=120&color=61DAFB" alt="Frontend Expertise" />
+          ⭐⭐⭐⭐⭐ | Expert |
+<!--           <img src="https://progress-bar.dev/95/?width=120&color=61DAFB" alt="Frontend Expertise" /> -->
         </div>
       </td>
       <td width="25%">
         <div align="center">
           <img src="https://img.shields.io/badge/Backend-Advanced-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Backend" />
           <br>
-          <img src="https://progress-bar.dev/80/?width=120&color=339933" alt="Backend Expertise" />
-        </div>
-      </td>
-      <td width="25%">
-        <div align="center">
-          <img src="https://img.shields.io/badge/UI/UX-Intermediate-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="UI/UX" />
-          <br>
-          <img src="https://progress-bar.dev/70/?width=120&color=F24E1E" alt="UI/UX Expertise" />
+          ⭐⭐⭐⭐☆ | Advanced |
         </div>
       </td>
       <td width="25%">
         <div align="center">
           <img src="https://img.shields.io/badge/DevOps-Learning-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DevOps" />
           <br>
-          <img src="https://progress-bar.dev/50/?width=120&color=2496ED" alt="DevOps Expertise" />
+         ⭐⭐☆☆☆ | Learning |
         </div>
       </td>
     </tr>
