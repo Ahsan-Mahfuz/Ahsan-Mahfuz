@@ -88,13 +88,154 @@ I'm a passionate Full Stack Developer with expertise in JavaScript and its ecosy
 
 ## 📊 GitHub Stats
 
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Ahsan-Mahfuz&show_icons=true&count_private=true&hide_border=true&title_color=0D76A8&icon_color=0D76A8&text_color=0D1117&bg_color=0D1117" alt="GitHub Stats" height="170px" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ahsan-Mahfuz&layout=compact&hide_border=true&title_color=0D76A8&text_color=0D1117&bg_color=0D1117" alt="Most Used Languages" height="170px" />
-</div>
+## 📊 GitHub Metrics Dashboard
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Ahsan-Mahfuz&theme=dark&hide_border=true&background=0D1117&stroke=0D76A8&ring=0D76A8&fire=0D76A8&currStreakNum=FFFFFF&sideNums=0D76A8&currStreakLabel=0D76A8&sideLabels=0D76A8&dates=FFFFFF" alt="GitHub Streak Stats" />
+  <table>
+    <tr>
+      <td width="50%">
+        <div align="center">
+          <h3>💻 Code Activity</h3>
+          <div>
+            <img src="https://img.shields.io/badge/JavaScript-85%25-F7DF1E?style=for-the-badge&logo=javascript&logoColor=white&color=F7DF1E" alt="JavaScript 85%" />
+            <img src="https://img.shields.io/badge/TypeScript-65%25-3178C6?style=for-the-badge&logo=typescript&logoColor=white&color=3178C6" alt="TypeScript 65%" />
+            <img src="https://img.shields.io/badge/React-78%25-61DAFB?style=for-the-badge&logo=react&logoColor=black&color=61DAFB" alt="React 78%" />
+            <img src="https://img.shields.io/badge/Node.js-70%25-339933?style=for-the-badge&logo=node.js&logoColor=white&color=339933" alt="Node.js 70%" />
+            <img src="https://img.shields.io/badge/Next.js-60%25-000000?style=for-the-badge&logo=next.js&logoColor=white&color=000000" alt="Next.js 60%" />
+          </div>
+          <div align="center">
+            <h4>Commit Activity</h4>
+            <img src="https://img.shields.io/badge/⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜⬜⬜-54%25-0D76A8?style=for-the-badge" alt="Commit Activity" />
+            <h4>Code Quality</h4>
+            <img src="https://img.shields.io/badge/⬛⬛⬛⬛⬛⬛⬛⬛⬛⬜⬜⬜⬜-70%25-0D76A8?style=for-the-badge" alt="Code Quality" />
+          </div>
+        </div>
+      </td>
+      <td width="50%">
+        <div align="center">
+          <h3>🔥 Productivity Streak</h3>
+          <div>
+            <h4>Current Streak</h4>
+            <img src="https://img.shields.io/badge/🔥_12_Days-Active-FF5722?style=for-the-badge" alt="Current Streak" />
+            <h4>Best Streak</h4>
+            <img src="https://img.shields.io/badge/🔥_34_Days-Record-FF9800?style=for-the-badge" alt="Best Streak" />
+            <h4>Total Contributions</h4>
+            <img src="https://img.shields.io/badge/850+-Contributions-4CAF50?style=for-the-badge" alt="Total Contributions" />
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td width="50%">
+        <div align="center">
+          <h3>🏆 Achievements</h3>
+          <div>
+            <img src="https://img.shields.io/badge/🔷_Arctic_Code_Vault_Contributor-2023-0D76A8?style=for-the-badge" alt="Arctic Code Vault" />
+            <img src="https://img.shields.io/badge/🔶_PRO_Developer-Verified-0D76A8?style=for-the-badge" alt="PRO Developer" />
+            <img src="https://img.shields.io/badge/🔹_Rising_Star-Community-0D76A8?style=for-the-badge" alt="Rising Star" />
+          </div>
+        </div>
+      </td>
+      <td width="50%">
+        <div align="center">
+          <h3>📈 Repository Stats</h3>
+          <div>
+            <img src="https://img.shields.io/badge/Total_Repositories-25+-0D76A8?style=for-the-badge" alt="Total Repositories" />
+            <img src="https://img.shields.io/badge/Stars_Earned-120+-0D76A8?style=for-the-badge" alt="Stars Earned" />
+            <img src="https://img.shields.io/badge/Most_Used_Languages-JavaScript,_TypeScript-0D76A8?style=for-the-badge" alt="Most Used Languages" />
+          </div>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Animated Activity Monitor -->
+<div align="center">
+  <h2>⚡ Contribution Activity</h2>
+  <table>
+    <tr>
+      <td><strong>Monday</strong></td>
+      <td><img src="https://progress-bar.dev/85/?width=120&color=0D76A8" alt="Monday Activity" /></td>
+      <td><strong>Friday</strong></td>
+      <td><img src="https://progress-bar.dev/75/?width=120&color=0D76A8" alt="Friday Activity" /></td>
+    </tr>
+    <tr>
+      <td><strong>Tuesday</strong></td>
+      <td><img src="https://progress-bar.dev/90/?width=120&color=0D76A8" alt="Tuesday Activity" /></td>
+      <td><strong>Saturday</strong></td>
+      <td><img src="https://progress-bar.dev/40/?width=120&color=0D76A8" alt="Saturday Activity" /></td>
+    </tr>
+    <tr>
+      <td><strong>Wednesday</strong></td>
+      <td><img src="https://progress-bar.dev/80/?width=120&color=0D76A8" alt="Wednesday Activity" /></td>
+      <td><strong>Sunday</strong></td>
+      <td><img src="https://progress-bar.dev/30/?width=120&color=0D76A8" alt="Sunday Activity" /></td>
+    </tr>
+    <tr>
+      <td><strong>Thursday</strong></td>
+      <td><img src="https://progress-bar.dev/70/?width=120&color=0D76A8" alt="Thursday Activity" /></td>
+      <td><strong>Average</strong></td>
+      <td><img src="https://progress-bar.dev/67/?width=120&color=0D76A8" alt="Average Activity" /></td>
+    </tr>
+  </table>
+</div>
+
+<!-- Expertise Gauge -->
+<div align="center">
+  <h2>🔍 Expertise Level</h2>
+  
+  <table>
+    <tr>
+      <td width="25%">
+        <div align="center">
+          <img src="https://img.shields.io/badge/Frontend-Expert-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="Frontend" />
+          <br>
+          <img src="https://progress-bar.dev/95/?width=120&color=61DAFB" alt="Frontend Expertise" />
+        </div>
+      </td>
+      <td width="25%">
+        <div align="center">
+          <img src="https://img.shields.io/badge/Backend-Advanced-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Backend" />
+          <br>
+          <img src="https://progress-bar.dev/80/?width=120&color=339933" alt="Backend Expertise" />
+        </div>
+      </td>
+      <td width="25%">
+        <div align="center">
+          <img src="https://img.shields.io/badge/UI/UX-Intermediate-F24E1E?style=for-the-badge&logo=figma&logoColor=white" alt="UI/UX" />
+          <br>
+          <img src="https://progress-bar.dev/70/?width=120&color=F24E1E" alt="UI/UX Expertise" />
+        </div>
+      </td>
+      <td width="25%">
+        <div align="center">
+          <img src="https://img.shields.io/badge/DevOps-Learning-2496ED?style=for-the-badge&logo=docker&logoColor=white" alt="DevOps" />
+          <br>
+          <img src="https://progress-bar.dev/50/?width=120&color=2496ED" alt="DevOps Expertise" />
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+
+<!-- Custom Coding Metrics -->
+<div align="center">
+  <h2>💡 Developer Profile</h2>
+  
+  ```
+  ┌────────────────────────────────────────────────────────────────────┐
+  │                                                                    │
+  │   🧠 Problem Solver      [██████████████████████████░░░░░] 85%     │
+  │   🔍 Clean Coder         [█████████████████████████████░░] 90%     │
+  │   🚀 Fast Learner        [████████████████████████████░░░] 88%     │
+  │   🤝 Team Collaborator   [███████████████████████████░░░░] 86%     │
+  │   📚 Documentation       [████████████████████░░░░░░░░░░░] 70%     │
+  │                                                                    │
+  │        "Building scalable applications with clean code"            │
+  │                                                                    │
+  └────────────────────────────────────────────────────────────────────┘
+  ```
 </div>
 
 <div align="center">
