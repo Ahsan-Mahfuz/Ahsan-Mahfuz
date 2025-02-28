@@ -107,19 +107,6 @@ I'm a passionate Full Stack Developer with expertise in JavaScript and its ecosy
 
 <hr>
 
-## 🚀 Featured Projects
-
-<div align="center">
-  <a href="https://github.com/Ahsan-Mahfuz/project-1">
-    <img src="https://sampli-website-demo.netlify.app/sampler/campaign?username=Ahsan-Mahfuz&repo=project-1&title_color=0D76A8&icon_color=0D76A8&text_color=FFFFFF&bg_color=0D1117&hide_border=true" alt="Project 1" />
-  </a>
-  <a href="https://github.com/Ahsan-Mahfuz/project-2">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=Ahsan-Mahfuz&repo=project-2&title_color=0D76A8&icon_color=0D76A8&text_color=FFFFFF&bg_color=0D1117&hide_border=true" alt="Project 2" />
-  </a>
-</div>
-
-<hr>
-
 <div align="center">
   <img src="https://img.shields.io/badge/Thanks%20for%20visiting!-0D76A8?style=for-the-badge" alt="Thanks for visiting!" />
   <br>
