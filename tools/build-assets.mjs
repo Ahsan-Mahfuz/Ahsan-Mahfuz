@@ -617,6 +617,108 @@ function statsBar(t) {
 `
 }
 
+/**
+ * Language mix — a 100% stacked bar, because the question is "what share of the
+ * work is each language", not "how many of each".
+ *
+ * The obvious move is GitHub's own language colours, but those are chosen for
+ * 8px dots, not for fills: JavaScript's #F1E05A lands at 1.31:1 on a light card
+ * and the neutral grey used for "Other" is ΔE 3.0 from Dart's teal under deuteranopia.
+ * These are the same hue families snapped to steps that pass the palette checks
+ * (`scripts/validate_palette.js` in the dataviz skill, `--pairs all`, both surfaces).
+ * Identity is never colour-alone anyway: every series is named in the legend with
+ * its percentage, and the two large segments are labelled inside the bar.
+ */
+const LANG_SERIES = {
+  dark: { JavaScript: '#B58A24', TypeScript: '#388BFD', Dart: '#1BA394', Other: '#6E7681' },
+  light: { JavaScript: '#BF8700', TypeScript: '#0969DA', Dart: '#00997F', Other: '#6E7781' },
+}
+
+function languagesCard(t, mode) {
+  const w = 1200
+  const h = 168
+  const padX = 34
+  const barY = 74
+  const barH = 30
+  const gap = 2 // surface gap between segments
+  const colors = LANG_SERIES[mode]
+  const { total, series } = DATA.languages
+
+  const title = text(display(700), 'Most used languages', 19, {
+    x: padX,
+    y: 44,
+    fill: t.text,
+    tracking: -0.3,
+  }).svg
+  const caption = text(mono(500), `PRIMARY LANGUAGE · ${total} PUBLIC REPOSITORIES`, 9.5, {
+    fill: t.muted,
+    tracking: 2,
+  })
+
+  const barW = w - padX * 2
+  let x = padX
+  const segments = []
+  const inBarLabels = []
+
+  series.forEach((entry, i) => {
+    const share = entry.repos / total
+    const rawW = barW * share
+    const segW = Math.max(rawW - (i < series.length - 1 ? gap : 0), 3)
+    const color = colors[entry.name] ?? colors.Other
+    const first = i === 0
+    const last = i === series.length - 1
+    const r = 6
+
+    // Only the outer ends are rounded, so the bar reads as one measure.
+    const d = first
+      ? `M${round(x + r)} ${barY} h${round(segW - r)} v${barH} h-${round(segW - r)} a${r} ${r} 0 0 1 -${r} -${r} v-${barH - 2 * r} a${r} ${r} 0 0 1 ${r} -${r} z`
+      : last
+        ? `M${round(x)} ${barY} h${round(segW - r)} a${r} ${r} 0 0 1 ${r} ${r} v${barH - 2 * r} a${r} ${r} 0 0 1 -${r} ${r} h-${round(segW - r)} z`
+        : `M${round(x)} ${barY} h${round(segW)} v${barH} h-${round(segW)} z`
+    segments.push(`<path d="${d}" fill="${color}"/>`)
+
+    if (rawW > 120) {
+      const label = text(display(600), `${(share * 100).toFixed(1)}%`, 13, {
+        fill: mode === 'dark' ? '#0D1117' : '#FFFFFF',
+      })
+      inBarLabels.push(
+        `<g transform="translate(${round(x + 14)} ${barY + barH / 2 + 4.5})">${label.svg}</g>`,
+      )
+    }
+    x += rawW
+  })
+
+  let legendX = padX
+  const legend = series.map((entry) => {
+    const share = ((entry.repos / total) * 100).toFixed(1)
+    const name = text(display(500), entry.name, 13.5, { fill: t.text })
+    const pct = text(mono(500), `${share}%`, 12, { fill: t.muted, tracking: 0.4 })
+    const g = `<g transform="translate(${round(legendX)} ${h - 34})">
+      <rect x="0" y="-9" width="10" height="10" rx="3" fill="${colors[entry.name] ?? colors.Other}"/>
+      <g transform="translate(18 0)">${name.svg}</g>
+      <g transform="translate(${round(18 + name.width + 8)} 0)">${pct.svg}</g>
+    </g>`
+    legendX += 18 + name.width + 8 + pct.width + 26
+    return g
+  })
+
+  const summary = series
+    .map((s) => `${s.name} ${((s.repos / total) * 100).toFixed(1)}%`)
+    .join(', ')
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}"
+     viewBox="0 0 ${w} ${h}" role="img"
+     aria-label="${esc(`Primary language across ${total} public repositories: ${summary}`)}">
+  <rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="16" fill="${t.surfaceAlt}" stroke="${t.border}"/>
+  ${title}
+  <g transform="translate(${round(w - padX - caption.width)} 44)">${caption.svg}</g>
+  ${segments.join('\n  ')}
+  ${inBarLabels.join('\n  ')}
+  ${legend.join('\n  ')}
+</svg>
+`
+}
+
 /* the snippet is authored as tokens so it can be coloured without a parser */
 const CODE = [
   [['kw', 'const '], ['id', 'ahsan'], ['op', ' = {']],
@@ -841,6 +943,7 @@ for (const [mode, t] of Object.entries(THEMES)) {
   write(`stack-${mode}.svg`, stack(t))
   write(`about-${mode}.svg`, aboutCard(t))
   write(`stats-${mode}.svg`, statsBar(t))
+  write(`langs-${mode}.svg`, languagesCard(t, mode))
   write(`connect-${mode}.svg`, connectCard(t))
   for (const project of PROJECTS) {
     write(`proj-${project.key}-${mode}.svg`, projectCard(t, project))

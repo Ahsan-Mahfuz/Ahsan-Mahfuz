@@ -42,7 +42,10 @@ const query = `query {
   user(login: "${USER}") {
     createdAt
     followers { totalCount }
-    repositories(privacy: PUBLIC, ownerAffiliations: OWNER, isFork: false) { totalCount }
+    repositories(privacy: PUBLIC, ownerAffiliations: OWNER, isFork: false, first: 100) {
+      totalCount
+      nodes { primaryLanguage { name } }
+    }
     contributionsCollection {
       contributionCalendar { totalContributions }
     }
@@ -72,6 +75,28 @@ if (body.errors) {
 }
 
 const user = body.data.user
+
+/**
+ * Share of repositories by primary language, keeping the three biggest and
+ * folding the rest (plus repos GitHub cannot classify) into "Other" — the card
+ * has room for four series, and a 1%-of-one-repo slice is noise, not signal.
+ */
+function languageMix(nodes) {
+  const counts = new Map()
+  for (const node of nodes) {
+    const name = node.primaryLanguage?.name ?? 'Other'
+    counts.set(name, (counts.get(name) ?? 0) + 1)
+  }
+
+  const ranked = [...counts].filter(([name]) => name !== 'Other').sort((a, b) => b[1] - a[1])
+  const top = ranked.slice(0, 3)
+  const rest = ranked.slice(3).reduce((sum, [, n]) => sum + n, 0) + (counts.get('Other') ?? 0)
+
+  const series = top.map(([name, repos]) => ({ name, repos }))
+  if (rest > 0) series.push({ name: 'Other', repos: rest })
+  return { total: nodes.length, series }
+}
+
 const next = {
   generatedAt: new Date().toISOString().slice(0, 10),
   stats: {
@@ -80,6 +105,7 @@ const next = {
     followers: user.followers.totalCount,
     since: new Date(user.createdAt).getFullYear(),
   },
+  languages: languageMix(user.repositories.nodes),
   repos: Object.fromEntries(
     repoNames.map((name, i) => {
       const repo = body.data[`r${i}`]
