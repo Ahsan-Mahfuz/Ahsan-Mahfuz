@@ -51,6 +51,7 @@ Everything else lives in [`build-assets.mjs`](./build-assets.mjs):
 | Link buttons | `BUTTONS` + `CUSTOM_MARKS` |
 | Code snippet and fact rows | `CODE`, `FACTS` |
 | Project cards | `PROJECTS` |
+| Language chart colours | `LANG_SERIES` (validated — see below) |
 | Availability wording | `connectCard()` |
 | Footer line | `footer()` |
 
@@ -59,6 +60,27 @@ data. If a slug has been renamed upstream the build fails loudly rather than sil
 dropping the logo; add the new name to `ICON_ALIASES`. AWS and LinkedIn have no
 simple-icons marks any more (trademark policy): AWS is named in the README copy, and
 LinkedIn uses a neutral network glyph from `CUSTOM_MARKS` rather than a redrawn logo.
+
+## The language chart
+
+`languagesCard()` replaces the github-readme-stats "most used languages" card, whose
+public instance is paused. It plots share of public repositories by primary language as a
+100% stacked bar.
+
+The colours are **not** GitHub's language colours. Those are tuned for 8px dots, not
+fills: JavaScript's `#F1E05A` sits at 1.31:1 contrast on a light card, and the grey used
+for "Other" is ΔE 3.0 from Dart's teal under deuteranopia — two segments most people with
+red-green colour blindness could not tell apart. `LANG_SERIES` keeps the same hue families
+snapped to steps that pass every check of the dataviz palette validator (`--pairs all`, on
+both surfaces). Re-run it after changing a colour:
+
+```bash
+node scripts/validate_palette.js "#BF8700,#0969DA,#00997F" --mode light --surface "#FBFCFD"
+node scripts/validate_palette.js "#B58A24,#388BFD,#1BA394" --mode dark  --surface "#10161E"
+```
+
+Colour is never the only cue regardless: every series is named with its percentage in the
+legend, the large segments are labelled inside the bar, and a 2px gap separates segments.
 
 ## Two rules worth keeping
 

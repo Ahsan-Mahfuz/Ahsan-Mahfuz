@@ -6,6 +6,15 @@
     "followers": 4,
     "since": 2021
   },
+  "languages": {
+    "total": 64,
+    "series": [
+      { "name": "JavaScript", "repos": 32 },
+      { "name": "TypeScript", "repos": 25 },
+      { "name": "Dart", "repos": 1 },
+      { "name": "Other", "repos": 6 }
+    ]
+  },
   "repos": {
     "happyphoto_backend": { "language": "TypeScript", "lastPush": "2026-07-30" },
     "theo_backend": { "language": "TypeScript", "lastPush": "2026-07-28" },

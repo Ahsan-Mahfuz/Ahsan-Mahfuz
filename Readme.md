@@ -244,28 +244,24 @@ Client work, experiments and everything in between —
 <img src="./assets/h-stats.svg" alt="GitHub Stats" />
 
 <!--
-  Everything in this section is pulled live from the GitHub API on page load.
-
-  The two cards below use the free public github-readme-stats instance, which answers 503 once its
-  daily Vercel quota runs out. Permanent fix: deploy your own copy —
+  This section used two github-readme-stats cards. That public instance now answers
+  "DEPLOYMENT_PAUSED" (HTTP 503) for everyone, so both rendered as broken images — the language
+  breakdown below is generated here instead, from the same 12-hourly API refresh as the counters
+  at the top. If you would rather have the original cards back, deploy your own instance:
   https://github.com/anuraghazra/github-readme-stats#deploy-on-your-own-vercel-instance
-  — then replace every `github-readme-stats.vercel.app` in this file with `<your-app>.vercel.app`.
+
+  The streak card underneath is a different service and is still live on page load.
 -->
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/langs-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./assets/langs-light.svg" />
+  <img src="./assets/langs-dark.svg" width="100%" alt="Share of public repositories by primary language — the card itself carries the current figures" />
+</picture>
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Ahsan-Mahfuz&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=58A6FF&icon_color=58A6FF&text_color=9198A1&rank_icon=github" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Ahsan-Mahfuz&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=00000000&title_color=0969DA&icon_color=0969DA&text_color=59636E&rank_icon=github" />
-  <img height="170em" src="https://github-readme-stats.vercel.app/api?username=Ahsan-Mahfuz&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" alt="GitHub stats" />
-</picture>
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Ahsan-Mahfuz&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=58A6FF&text_color=9198A1" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Ahsan-Mahfuz&layout=compact&langs_count=8&hide_border=true&bg_color=00000000&title_color=0969DA&text_color=59636E" />
-  <img height="170em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Ahsan-Mahfuz&layout=compact&langs_count=8&hide_border=true" alt="Most used languages" />
-</picture>
-
-<br /><br />
+<br />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=Ahsan-Mahfuz&hide_border=true&background=00000000&stroke=242C37&ring=58A6FF&fire=58A6FF&currStreakLabel=58A6FF&sideLabels=9198A1&currStreakNum=E6EDF3&sideNums=E6EDF3&dates=6E7681" />
