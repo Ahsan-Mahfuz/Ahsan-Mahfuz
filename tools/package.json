@@ -1,0 +1,13 @@
+{
+  "name": "profile-assets",
+  "private": true,
+  "type": "module",
+  "description": "Generates the outlined-typography SVG assets for the profile README.",
+  "scripts": {
+    "build": "node build-assets.mjs"
+  },
+  "dependencies": {
+    "fontkit": "^2.0.4",
+    "simple-icons": "^15.0.0"
+  }
+}
