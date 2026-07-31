@@ -1,25 +1,52 @@
 {
-  "generatedAt": "2026-07-30",
+  "generatedAt": "2026-07-31",
   "stats": {
-    "repos": 64,
-    "contributions": 1730,
+    "repos": 63,
+    "contributions": 1732,
     "followers": 4,
     "since": 2021
   },
   "languages": {
-    "total": 64,
+    "total": 63,
     "series": [
-      { "name": "JavaScript", "repos": 32 },
-      { "name": "TypeScript", "repos": 25 },
-      { "name": "Dart", "repos": 1 },
-      { "name": "Other", "repos": 6 }
+      {
+        "name": "JavaScript",
+        "repos": 32
+      },
+      {
+        "name": "TypeScript",
+        "repos": 25
+      },
+      {
+        "name": "HTML",
+        "repos": 1
+      },
+      {
+        "name": "Other",
+        "repos": 5
+      }
     ]
   },
   "repos": {
-    "happyphoto_backend": { "language": "TypeScript", "lastPush": "2026-07-30" },
-    "theo_backend": { "language": "TypeScript", "lastPush": "2026-07-28" },
-    "georgecowin385_net_snap_frontend": { "language": "TypeScript", "lastPush": "2026-07-28" },
-    "bitechx-product-management-app": { "language": "TypeScript", "lastPush": "2025-10-14" },
-    "weather-api": { "language": "JavaScript", "lastPush": "2025-09-19" }
+    "happyphoto_backend": {
+      "language": "TypeScript",
+      "lastPush": "2026-07-30"
+    },
+    "theo_backend": {
+      "language": "TypeScript",
+      "lastPush": "2026-07-28"
+    },
+    "georgecowin385_net_snap_frontend": {
+      "language": "TypeScript",
+      "lastPush": "2026-07-28"
+    },
+    "bitechx-product-management-app": {
+      "language": "TypeScript",
+      "lastPush": "2026-07-12"
+    },
+    "weather-api": {
+      "language": "JavaScript",
+      "lastPush": "2026-07-12"
+    }
   }
 }
