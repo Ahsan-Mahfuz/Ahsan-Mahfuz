@@ -5,3 +5,4 @@ temp_interactive_push.bat
 # asset builder
 tools/node_modules/
 tools/.fonts/
+.gitignore
