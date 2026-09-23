@@ -70,7 +70,21 @@ if (!res.ok) {
 
 const body = await res.json()
 if (body.errors) {
-  console.error('GraphQL errors:', JSON.stringify(body.errors, null, 2))
+  // A repo that is private, renamed or deleted comes back as a NOT_FOUND error
+  // alongside perfectly good data for everything else. The built-in
+  // GITHUB_TOKEN cannot see this account's other private repos, so those are
+  // expected: warn and fall through to the per-repo null handling below, which
+  // keeps the last known values. Anything else is a real failure.
+  const fatal = body.errors.filter((e) => e.type !== 'NOT_FOUND')
+  if (fatal.length) {
+    console.error('GraphQL errors:', JSON.stringify(fatal, null, 2))
+    process.exit(1)
+  }
+  for (const e of body.errors) console.warn(`! ${e.message}`)
+}
+
+if (!body.data?.user) {
+  console.error('GraphQL returned no user data:', JSON.stringify(body.errors ?? body, null, 2))
   process.exit(1)
 }
 
