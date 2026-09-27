@@ -1,20 +1,20 @@
 {
   "generatedAt": "2026-09-27",
   "stats": {
-    "repos": 2,
-    "contributions": 2369,
+    "repos": 3,
+    "contributions": 2379,
     "followers": 6,
     "since": 2021
   },
   "languages": {
-    "total": 2,
+    "total": 3,
     "series": [
       {
-        "name": "JavaScript",
-        "repos": 1
+        "name": "TypeScript",
+        "repos": 2
       },
       {
-        "name": "TypeScript",
+        "name": "JavaScript",
         "repos": 1
       }
     ]
